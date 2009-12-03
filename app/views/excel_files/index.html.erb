@@ -1,0 +1,20 @@
+<h1>Listing excel_files</h1>
+
+<table>
+  <tr>
+    <th>Path</th>
+  </tr>
+
+<% @excel_files.each do |excel_file| %>
+  <tr>
+    <td><%=h excel_file.path %></td>
+    <td><%= link_to 'Show', excel_file %></td>
+    <td><%= link_to 'Edit', edit_excel_file_path(excel_file) %></td>
+    <td><%= link_to 'Destroy', excel_file, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New excel_file', new_excel_file_path %>

@@ -1,0 +1,15 @@
+<h1>New excel_file</h1>
+
+<% form_for(@excel_file) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :path %><br />
+    <%= f.text_field :path %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', excel_files_path %>

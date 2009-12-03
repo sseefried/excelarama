@@ -1,0 +1,24 @@
+<h1>Editing cell</h1>
+
+<% form_for(@cell) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :contents %><br />
+    <%= f.text_field :contents %>
+  </p>
+  <p>
+    <%= f.label :row %><br />
+    <%= f.text_field :row %>
+  </p>
+  <p>
+    <%= f.label :column %><br />
+    <%= f.text_field :column %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @cell %> |
+<%= link_to 'Back', cells_path %>

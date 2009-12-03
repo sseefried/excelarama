@@ -1,0 +1,2223 @@
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.3ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateExcelFiles (20091202235011)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "excel_files" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "path" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091202235011')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("excel_files")[0m
+Rendering excel_files/show.html.erb
+
+
+Processing ExcelFilesController#destroy (for 0.0.0.0 at 2009-12-03 10:50:43) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/excel_files
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/excel_files/37]
+
+
+Processing ExcelFilesController#destroy (for 0.0.0.0 at 2009-12-03 10:50:43) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/excel_files
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 10:50:43) [PUT]
+  Parameters: {"id"=>"37", "excel_file"=>{"these"=>"params"}}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/37?excel_file%5Bthese%5D=params]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 10:50:43) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 10:50:43) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 10:50:43) [PUT]
+  Parameters: {"id"=>"37", "excel_file"=>{"these"=>"params"}}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/37?excel_file%5Bthese%5D=params]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 10:50:43) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/excel_files/1008
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 10:50:43) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/excel_files/1009
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#create (for 0.0.0.0 at 2009-12-03 10:50:43) [POST]
+  Parameters: {"excel_file"=>{"these"=>"params"}}
+Rendering template within layouts/excel_files
+Rendering excel_files/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files?excel_file%5Bthese%5D=params]
+
+
+Processing ExcelFilesController#create (for 0.0.0.0 at 2009-12-03 10:50:43) [POST]
+  Parameters: {"excel_file"=>{}}
+Rendering template within layouts/excel_files
+Rendering excel_files/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files?]
+
+
+Processing ExcelFilesController#create (for 0.0.0.0 at 2009-12-03 10:50:43) [POST]
+  Parameters: {"excel_file"=>{"these"=>"params"}}
+Redirected to http://test.host/excel_files/1012
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/excel_files?excel_file%5Bthese%5D=params]
+
+
+Processing ExcelFilesController#create (for 0.0.0.0 at 2009-12-03 10:50:43) [POST]
+  Parameters: {"excel_file"=>{}}
+Redirected to http://test.host/excel_files/1013
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/excel_files?]
+
+
+Processing ExcelFilesController#edit (for 0.0.0.0 at 2009-12-03 10:50:43) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/37/edit]
+
+
+Processing ExcelFilesController#new (for 0.0.0.0 at 2009-12-03 10:50:43) [GET]
+Rendering template within layouts/excel_files
+Rendering excel_files/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/new]
+
+
+Processing ExcelFilesController#show (for 0.0.0.0 at 2009-12-03 10:50:43) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/excel_files
+Rendering excel_files/show
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/37]
+
+
+Processing ExcelFilesController#index (for 0.0.0.0 at 2009-12-03 10:50:43) [GET]
+Rendering template within layouts/excel_files
+Rendering excel_files/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files]
+Rendering excel_files/edit.html.erb
+Rendering excel_files/index.html.erb
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-02 23:50:44', '2009-12-02 23:50:44', 'value for path')[0m
+Rendering excel_files/new.html.erb
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:01:07', '2009-12-03 00:01:07', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:02:37', '2009-12-03 00:02:37', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:02:39', '2009-12-03 00:02:39', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:02:40', '2009-12-03 00:02:40', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:02:42', '2009-12-03 00:02:42', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:02:43', '2009-12-03 00:02:43', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:02:45', '2009-12-03 00:02:45', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:02:47', '2009-12-03 00:02:47', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:02:48', '2009-12-03 00:02:48', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:02:50', '2009-12-03 00:02:50', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:02:51', '2009-12-03 00:02:51', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:02:53', '2009-12-03 00:02:53', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:02:55', '2009-12-03 00:02:55', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:02:56', '2009-12-03 00:02:56', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:02:58', '2009-12-03 00:02:58', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:02:59', '2009-12-03 00:02:59', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:01', '2009-12-03 00:03:01', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:02', '2009-12-03 00:03:02', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:04', '2009-12-03 00:03:04', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.6ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:05', '2009-12-03 00:03:05', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:07', '2009-12-03 00:03:07', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:09', '2009-12-03 00:03:09', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:10', '2009-12-03 00:03:10', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:12', '2009-12-03 00:03:12', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:13', '2009-12-03 00:03:13', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:15', '2009-12-03 00:03:15', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:16', '2009-12-03 00:03:16', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:18', '2009-12-03 00:03:18', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:20', '2009-12-03 00:03:20', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:21', '2009-12-03 00:03:21', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:23', '2009-12-03 00:03:23', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:24', '2009-12-03 00:03:24', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:26', '2009-12-03 00:03:26', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:27', '2009-12-03 00:03:27', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:29', '2009-12-03 00:03:29', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.5ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:31', '2009-12-03 00:03:31', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:32', '2009-12-03 00:03:32', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:34', '2009-12-03 00:03:34', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:35', '2009-12-03 00:03:35', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:37', '2009-12-03 00:03:37', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:38', '2009-12-03 00:03:38', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:40', '2009-12-03 00:03:40', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:42', '2009-12-03 00:03:42', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:43', '2009-12-03 00:03:43', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:45', '2009-12-03 00:03:45', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:46', '2009-12-03 00:03:46', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:48', '2009-12-03 00:03:48', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:49', '2009-12-03 00:03:49', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:51', '2009-12-03 00:03:51', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:53', '2009-12-03 00:03:53', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:54', '2009-12-03 00:03:54', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:56', '2009-12-03 00:03:56', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:57', '2009-12-03 00:03:57', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:03:59', '2009-12-03 00:03:59', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:00', '2009-12-03 00:04:00', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:02', '2009-12-03 00:04:02', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:04', '2009-12-03 00:04:04', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:05', '2009-12-03 00:04:05', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:07', '2009-12-03 00:04:07', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:09', '2009-12-03 00:04:09', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:10', '2009-12-03 00:04:10', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:12', '2009-12-03 00:04:12', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:13', '2009-12-03 00:04:13', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:15', '2009-12-03 00:04:15', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:17', '2009-12-03 00:04:17', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:18', '2009-12-03 00:04:18', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:20', '2009-12-03 00:04:20', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:21', '2009-12-03 00:04:21', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:23', '2009-12-03 00:04:23', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:24', '2009-12-03 00:04:24', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:26', '2009-12-03 00:04:26', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:28', '2009-12-03 00:04:28', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:29', '2009-12-03 00:04:29', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:31', '2009-12-03 00:04:31', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:32', '2009-12-03 00:04:32', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:34', '2009-12-03 00:04:34', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.6ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:35', '2009-12-03 00:04:35', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:37', '2009-12-03 00:04:37', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:39', '2009-12-03 00:04:39', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:40', '2009-12-03 00:04:40', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:42', '2009-12-03 00:04:42', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:43', '2009-12-03 00:04:43', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:45', '2009-12-03 00:04:45', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:46', '2009-12-03 00:04:46', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:48', '2009-12-03 00:04:48', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:50', '2009-12-03 00:04:50', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:51', '2009-12-03 00:04:51', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:53', '2009-12-03 00:04:53', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:54', '2009-12-03 00:04:54', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:56', '2009-12-03 00:04:56', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:57', '2009-12-03 00:04:57', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:04:59', '2009-12-03 00:04:59', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:01', '2009-12-03 00:05:01', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:02', '2009-12-03 00:05:02', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:04', '2009-12-03 00:05:04', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.6ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:05', '2009-12-03 00:05:05', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:07', '2009-12-03 00:05:07', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:08', '2009-12-03 00:05:08', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:10', '2009-12-03 00:05:10', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:12', '2009-12-03 00:05:12', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:13', '2009-12-03 00:05:13', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:15', '2009-12-03 00:05:15', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:16', '2009-12-03 00:05:16', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:18', '2009-12-03 00:05:18', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:19', '2009-12-03 00:05:19', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:21', '2009-12-03 00:05:21', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:23', '2009-12-03 00:05:23', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:24', '2009-12-03 00:05:24', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:26', '2009-12-03 00:05:26', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:27', '2009-12-03 00:05:27', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:29', '2009-12-03 00:05:29', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:30', '2009-12-03 00:05:30', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:32', '2009-12-03 00:05:32', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:33', '2009-12-03 00:05:33', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:35', '2009-12-03 00:05:35', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.6ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:37', '2009-12-03 00:05:37', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:38', '2009-12-03 00:05:38', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.5ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:40', '2009-12-03 00:05:40', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:42', '2009-12-03 00:05:42', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:43', '2009-12-03 00:05:43', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.5ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:45', '2009-12-03 00:05:45', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:46', '2009-12-03 00:05:46', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:48', '2009-12-03 00:05:48', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:50', '2009-12-03 00:05:50', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:51', '2009-12-03 00:05:51', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:53', '2009-12-03 00:05:53', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:54', '2009-12-03 00:05:54', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:56', '2009-12-03 00:05:56', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:57', '2009-12-03 00:05:57', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:05:59', '2009-12-03 00:05:59', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:01', '2009-12-03 00:06:01', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:02', '2009-12-03 00:06:02', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:04', '2009-12-03 00:06:04', 'value for path')[0m
+  [4;36;1mExcelFile Create (97.3ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:05', '2009-12-03 00:06:05', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:07', '2009-12-03 00:06:07', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:09', '2009-12-03 00:06:09', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:10', '2009-12-03 00:06:10', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:12', '2009-12-03 00:06:12', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:13', '2009-12-03 00:06:13', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:15', '2009-12-03 00:06:15', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:16', '2009-12-03 00:06:16', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:18', '2009-12-03 00:06:18', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:20', '2009-12-03 00:06:20', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:21', '2009-12-03 00:06:21', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:23', '2009-12-03 00:06:23', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:24', '2009-12-03 00:06:24', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:26', '2009-12-03 00:06:26', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:27', '2009-12-03 00:06:27', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:29', '2009-12-03 00:06:29', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:31', '2009-12-03 00:06:31', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:32', '2009-12-03 00:06:32', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:34', '2009-12-03 00:06:34', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:35', '2009-12-03 00:06:35', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.6ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:37', '2009-12-03 00:06:37', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:38', '2009-12-03 00:06:38', 'value for path')[0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:40', '2009-12-03 00:06:40', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:42', '2009-12-03 00:06:42', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:43', '2009-12-03 00:06:43', 'value for path')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:45', '2009-12-03 00:06:45', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:46', '2009-12-03 00:06:46', 'value for path')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:48', '2009-12-03 00:06:48', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:50', '2009-12-03 00:06:50', 'value for path')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:51', '2009-12-03 00:06:51', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:53', '2009-12-03 00:06:53', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:54', '2009-12-03 00:06:54', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:56', '2009-12-03 00:06:56', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:57', '2009-12-03 00:06:57', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:06:59', '2009-12-03 00:06:59', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:01', '2009-12-03 00:07:01', 'value for path')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:02', '2009-12-03 00:07:02', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:04', '2009-12-03 00:07:04', 'value for path')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:05', '2009-12-03 00:07:05', 'value for path')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.6ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:07', '2009-12-03 00:07:07', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:08', '2009-12-03 00:07:08', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:10', '2009-12-03 00:07:10', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:12', '2009-12-03 00:07:12', 'value for path')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:13', '2009-12-03 00:07:13', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:15', '2009-12-03 00:07:15', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:16', '2009-12-03 00:07:16', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:18', '2009-12-03 00:07:18', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:19', '2009-12-03 00:07:19', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:21', '2009-12-03 00:07:21', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:22', '2009-12-03 00:07:22', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:24', '2009-12-03 00:07:24', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.5ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:26', '2009-12-03 00:07:26', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:27', '2009-12-03 00:07:27', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:29', '2009-12-03 00:07:29', 'value for path')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:30', '2009-12-03 00:07:30', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:32', '2009-12-03 00:07:32', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:34', '2009-12-03 00:07:34', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:35', '2009-12-03 00:07:35', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.6ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:37', '2009-12-03 00:07:37', 'value for path')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:38', '2009-12-03 00:07:38', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:40', '2009-12-03 00:07:40', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:41', '2009-12-03 00:07:41', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:43', '2009-12-03 00:07:43', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:45', '2009-12-03 00:07:45', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:46', '2009-12-03 00:07:46', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:48', '2009-12-03 00:07:48', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:49', '2009-12-03 00:07:49', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:51', '2009-12-03 00:07:51', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:52', '2009-12-03 00:07:52', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:54', '2009-12-03 00:07:54', 'value for path')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:56', '2009-12-03 00:07:56', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:57', '2009-12-03 00:07:57', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:07:59', '2009-12-03 00:07:59', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:00', '2009-12-03 00:08:00', 'value for path')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:02', '2009-12-03 00:08:02', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:03', '2009-12-03 00:08:03', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:05', '2009-12-03 00:08:05', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.6ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:07', '2009-12-03 00:08:07', 'value for path')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.5ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:08', '2009-12-03 00:08:08', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:10', '2009-12-03 00:08:10', 'value for path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mExcelFile Create (0.4ms)[0m   [0;1mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:11', '2009-12-03 00:08:11', 'value for path')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:13', '2009-12-03 00:08:13', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:14', '2009-12-03 00:08:14', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:16', '2009-12-03 00:08:16', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:18', '2009-12-03 00:08:18', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:19', '2009-12-03 00:08:19', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:21', '2009-12-03 00:08:21', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:22', '2009-12-03 00:08:22', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:24', '2009-12-03 00:08:24', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:25', '2009-12-03 00:08:25', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:27', '2009-12-03 00:08:27', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:29', '2009-12-03 00:08:29', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:30', '2009-12-03 00:08:30', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:32', '2009-12-03 00:08:32', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:33', '2009-12-03 00:08:33', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:35', '2009-12-03 00:08:35', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (67.5ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:36', '2009-12-03 00:08:36', 'value for path')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:38', '2009-12-03 00:08:38', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:40', '2009-12-03 00:08:40', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:41', '2009-12-03 00:08:41', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:43', '2009-12-03 00:08:43', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:44', '2009-12-03 00:08:44', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:46', '2009-12-03 00:08:46', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:47', '2009-12-03 00:08:47', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:49', '2009-12-03 00:08:49', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:50', '2009-12-03 00:08:50', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:52', '2009-12-03 00:08:52', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:54', '2009-12-03 00:08:54', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.5ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:55', '2009-12-03 00:08:55', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:57', '2009-12-03 00:08:57', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:08:58', '2009-12-03 00:08:58', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:09:00', '2009-12-03 00:09:00', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:09:01', '2009-12-03 00:09:01', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:09:03', '2009-12-03 00:09:03', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:09:05', '2009-12-03 00:09:05', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:09:06', '2009-12-03 00:09:06', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:09:08', '2009-12-03 00:09:08', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:09:09', '2009-12-03 00:09:09', 'value for path')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:09:11', '2009-12-03 00:09:11', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:09:12', '2009-12-03 00:09:12', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:09:14', '2009-12-03 00:09:14', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:09:16', '2009-12-03 00:09:16', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:09:17', '2009-12-03 00:09:17', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:09:19', '2009-12-03 00:09:19', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:09:20', '2009-12-03 00:09:20', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:09:22', '2009-12-03 00:09:22', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:09:24', '2009-12-03 00:09:24', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:09:25', '2009-12-03 00:09:25', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+Rendering excel_files/show.html.erb
+
+
+Processing ExcelFilesController#destroy (for 0.0.0.0 at 2009-12-03 11:09:27) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/excel_files
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/excel_files/37]
+
+
+Processing ExcelFilesController#destroy (for 0.0.0.0 at 2009-12-03 11:09:27) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/excel_files
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:09:27) [PUT]
+  Parameters: {"id"=>"37", "excel_file"=>{"these"=>"params"}}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/37?excel_file%5Bthese%5D=params]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:09:27) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:09:27) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:09:27) [PUT]
+  Parameters: {"id"=>"37", "excel_file"=>{"these"=>"params"}}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/37?excel_file%5Bthese%5D=params]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:09:27) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/excel_files/1008
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:09:27) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/excel_files/1009
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#create (for 0.0.0.0 at 2009-12-03 11:09:27) [POST]
+  Parameters: {"excel_file"=>{"these"=>"params"}}
+Rendering template within layouts/excel_files
+Rendering excel_files/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files?excel_file%5Bthese%5D=params]
+
+
+Processing ExcelFilesController#create (for 0.0.0.0 at 2009-12-03 11:09:27) [POST]
+  Parameters: {"excel_file"=>{}}
+Rendering template within layouts/excel_files
+Rendering excel_files/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files?]
+
+
+Processing ExcelFilesController#create (for 0.0.0.0 at 2009-12-03 11:09:27) [POST]
+  Parameters: {"excel_file"=>{"these"=>"params"}}
+Redirected to http://test.host/excel_files/1012
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/excel_files?excel_file%5Bthese%5D=params]
+
+
+Processing ExcelFilesController#create (for 0.0.0.0 at 2009-12-03 11:09:27) [POST]
+  Parameters: {"excel_file"=>{}}
+Redirected to http://test.host/excel_files/1013
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/excel_files?]
+
+
+Processing ExcelFilesController#edit (for 0.0.0.0 at 2009-12-03 11:09:27) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/37/edit]
+
+
+Processing ExcelFilesController#new (for 0.0.0.0 at 2009-12-03 11:09:27) [GET]
+Rendering template within layouts/excel_files
+Rendering excel_files/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/new]
+
+
+Processing ExcelFilesController#show (for 0.0.0.0 at 2009-12-03 11:09:27) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/excel_files
+Rendering excel_files/show
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/37]
+
+
+Processing ExcelFilesController#index (for 0.0.0.0 at 2009-12-03 11:09:27) [GET]
+Rendering template within layouts/excel_files
+Rendering excel_files/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files]
+Rendering excel_files/edit.html.erb
+Rendering excel_files/new.html.erb
+Rendering excel_files/index.html.erb
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:09:27', '2009-12-03 00:09:27', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+Rendering excel_files/show.html.erb
+
+
+Processing ExcelFilesController#destroy (for 0.0.0.0 at 2009-12-03 11:09:37) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/excel_files
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/excel_files/37]
+
+
+Processing ExcelFilesController#destroy (for 0.0.0.0 at 2009-12-03 11:09:37) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/excel_files
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:09:37) [PUT]
+  Parameters: {"id"=>"37", "excel_file"=>{"these"=>"params"}}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/37?excel_file%5Bthese%5D=params]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:09:37) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:09:37) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:09:37) [PUT]
+  Parameters: {"id"=>"37", "excel_file"=>{"these"=>"params"}}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/37?excel_file%5Bthese%5D=params]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:09:37) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/excel_files/1008
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:09:37) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/excel_files/1009
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#create (for 0.0.0.0 at 2009-12-03 11:09:37) [POST]
+  Parameters: {"excel_file"=>{"these"=>"params"}}
+Rendering template within layouts/excel_files
+Rendering excel_files/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files?excel_file%5Bthese%5D=params]
+
+
+Processing ExcelFilesController#create (for 0.0.0.0 at 2009-12-03 11:09:37) [POST]
+  Parameters: {"excel_file"=>{}}
+Rendering template within layouts/excel_files
+Rendering excel_files/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files?]
+
+
+Processing ExcelFilesController#create (for 0.0.0.0 at 2009-12-03 11:09:37) [POST]
+  Parameters: {"excel_file"=>{"these"=>"params"}}
+Redirected to http://test.host/excel_files/1012
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/excel_files?excel_file%5Bthese%5D=params]
+
+
+Processing ExcelFilesController#create (for 0.0.0.0 at 2009-12-03 11:09:37) [POST]
+  Parameters: {"excel_file"=>{}}
+Redirected to http://test.host/excel_files/1013
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/excel_files?]
+
+
+Processing ExcelFilesController#edit (for 0.0.0.0 at 2009-12-03 11:09:37) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/37/edit]
+
+
+Processing ExcelFilesController#new (for 0.0.0.0 at 2009-12-03 11:09:37) [GET]
+Rendering template within layouts/excel_files
+Rendering excel_files/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/new]
+
+
+Processing ExcelFilesController#show (for 0.0.0.0 at 2009-12-03 11:09:37) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/excel_files
+Rendering excel_files/show
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/37]
+
+
+Processing ExcelFilesController#index (for 0.0.0.0 at 2009-12-03 11:09:37) [GET]
+Rendering template within layouts/excel_files
+Rendering excel_files/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files]
+Rendering excel_files/edit.html.erb
+Rendering excel_files/new.html.erb
+Rendering excel_files/index.html.erb
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:09:37', '2009-12-03 00:09:37', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateExcelFiles (20091202235011)
+Migrating to CreateCells (20091203002014)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "cells" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "contents" varchar(255), "row" integer, "column" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091203002014')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("cells")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("excel_files")[0m
+Rendering excel_files/edit.html.erb
+Rendering excel_files/index.html.erb
+
+
+Processing ExcelFilesController#destroy (for 0.0.0.0 at 2009-12-03 11:20:58) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/excel_files
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/excel_files/37]
+
+
+Processing ExcelFilesController#destroy (for 0.0.0.0 at 2009-12-03 11:20:58) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/excel_files
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:20:58) [PUT]
+  Parameters: {"id"=>"37", "excel_file"=>{"these"=>"params"}}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/37?excel_file%5Bthese%5D=params]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:20:58) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:20:58) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:20:58) [PUT]
+  Parameters: {"id"=>"37", "excel_file"=>{"these"=>"params"}}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/37?excel_file%5Bthese%5D=params]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:20:58) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/excel_files/1010
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:20:58) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/excel_files/1011
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#create (for 0.0.0.0 at 2009-12-03 11:20:58) [POST]
+  Parameters: {"excel_file"=>{"these"=>"params"}}
+Rendering template within layouts/excel_files
+Rendering excel_files/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files?excel_file%5Bthese%5D=params]
+
+
+Processing ExcelFilesController#create (for 0.0.0.0 at 2009-12-03 11:20:58) [POST]
+  Parameters: {"excel_file"=>{}}
+Rendering template within layouts/excel_files
+Rendering excel_files/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files?]
+
+
+Processing ExcelFilesController#create (for 0.0.0.0 at 2009-12-03 11:20:58) [POST]
+  Parameters: {"excel_file"=>{"these"=>"params"}}
+Redirected to http://test.host/excel_files/1014
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/excel_files?excel_file%5Bthese%5D=params]
+
+
+Processing ExcelFilesController#create (for 0.0.0.0 at 2009-12-03 11:20:58) [POST]
+  Parameters: {"excel_file"=>{}}
+Redirected to http://test.host/excel_files/1015
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/excel_files?]
+
+
+Processing ExcelFilesController#edit (for 0.0.0.0 at 2009-12-03 11:20:58) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/37/edit]
+
+
+Processing ExcelFilesController#new (for 0.0.0.0 at 2009-12-03 11:20:58) [GET]
+Rendering template within layouts/excel_files
+Rendering excel_files/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/new]
+
+
+Processing ExcelFilesController#show (for 0.0.0.0 at 2009-12-03 11:20:58) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/excel_files
+Rendering excel_files/show
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/37]
+
+
+Processing ExcelFilesController#index (for 0.0.0.0 at 2009-12-03 11:20:58) [GET]
+Rendering template within layouts/excel_files
+Rendering excel_files/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files]
+Rendering excel_files/new.html.erb
+Rendering excel_files/show.html.erb
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:20:58', '2009-12-03 00:20:58', 'value for path')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+
+
+Processing CellsController#destroy (for 0.0.0.0 at 2009-12-03 11:20:58) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/cells
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/cells/37]
+
+
+Processing CellsController#destroy (for 0.0.0.0 at 2009-12-03 11:20:58) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/cells
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/cells/1]
+
+
+Processing CellsController#update (for 0.0.0.0 at 2009-12-03 11:20:58) [PUT]
+  Parameters: {"cell"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/cells
+Rendering cells/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/37?cell%5Bthese%5D=params]
+
+
+Processing CellsController#update (for 0.0.0.0 at 2009-12-03 11:20:58) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/cells
+Rendering cells/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/1]
+
+
+Processing CellsController#update (for 0.0.0.0 at 2009-12-03 11:20:58) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/cells
+Rendering cells/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/1]
+
+
+Processing CellsController#update (for 0.0.0.0 at 2009-12-03 11:20:59) [PUT]
+  Parameters: {"cell"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/cells
+Rendering cells/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/37?cell%5Bthese%5D=params]
+
+
+Processing CellsController#update (for 0.0.0.0 at 2009-12-03 11:20:59) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/cells/1028
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/cells/1]
+
+
+Processing CellsController#update (for 0.0.0.0 at 2009-12-03 11:20:59) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/cells/1029
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/cells/1]
+
+
+Processing CellsController#create (for 0.0.0.0 at 2009-12-03 11:20:59) [POST]
+  Parameters: {"cell"=>{"these"=>"params"}}
+Rendering template within layouts/cells
+Rendering cells/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells?cell%5Bthese%5D=params]
+
+
+Processing CellsController#create (for 0.0.0.0 at 2009-12-03 11:20:59) [POST]
+  Parameters: {"cell"=>{}}
+Rendering template within layouts/cells
+Rendering cells/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells?]
+
+
+Processing CellsController#create (for 0.0.0.0 at 2009-12-03 11:20:59) [POST]
+  Parameters: {"cell"=>{"these"=>"params"}}
+Redirected to http://test.host/cells/1032
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/cells?cell%5Bthese%5D=params]
+
+
+Processing CellsController#create (for 0.0.0.0 at 2009-12-03 11:20:59) [POST]
+  Parameters: {"cell"=>{}}
+Redirected to http://test.host/cells/1033
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/cells?]
+
+
+Processing CellsController#edit (for 0.0.0.0 at 2009-12-03 11:20:59) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/cells
+Rendering cells/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/37/edit]
+
+
+Processing CellsController#new (for 0.0.0.0 at 2009-12-03 11:20:59) [GET]
+Rendering template within layouts/cells
+Rendering cells/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/new]
+
+
+Processing CellsController#show (for 0.0.0.0 at 2009-12-03 11:20:59) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/cells
+Rendering cells/show
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/37]
+
+
+Processing CellsController#index (for 0.0.0.0 at 2009-12-03 11:20:59) [GET]
+Rendering template within layouts/cells
+Rendering cells/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells]
+Rendering cells/index.html.erb
+Rendering cells/edit.html.erb
+Rendering cells/show.html.erb
+  [4;35;1mCell Create (0.4ms)[0m   [0mINSERT INTO "cells" ("created_at", "updated_at", "row", "column", "contents") VALUES('2009-12-03 00:20:59', '2009-12-03 00:20:59', 1, 'value for column', 'value for contents')[0m
+Rendering cells/new.html.erb
+  [4;36;1mCell Create (0.4ms)[0m   [0;1mINSERT INTO "cells" ("created_at", "updated_at", "row", "column", "contents") VALUES('2009-12-03 00:25:03', '2009-12-03 00:25:03', 1, 'value for column', 'value for contents')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;36;1mCell Create (0.4ms)[0m   [0;1mINSERT INTO "cells" ("created_at", "updated_at", "row", "column", "contents") VALUES('2009-12-03 00:25:10', '2009-12-03 00:25:10', 1, 'value for column', 'value for contents')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;36;1mCell Create (0.4ms)[0m   [0;1mINSERT INTO "cells" ("created_at", "updated_at", "row", "column", "contents") VALUES('2009-12-03 00:25:11', '2009-12-03 00:25:11', 1, 'value for column', 'value for contents')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;36;1mCell Create (0.4ms)[0m   [0;1mINSERT INTO "cells" ("created_at", "updated_at", "row", "column", "contents") VALUES('2009-12-03 00:25:13', '2009-12-03 00:25:13', 1, 'value for column', 'value for contents')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "cells" [0m
+Rendering excel_files/edit.html.erb
+Rendering excel_files/index.html.erb
+
+
+Processing ExcelFilesController#destroy (for 0.0.0.0 at 2009-12-03 11:25:15) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/excel_files
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/excel_files/37]
+
+
+Processing ExcelFilesController#destroy (for 0.0.0.0 at 2009-12-03 11:25:15) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/excel_files
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:25:15) [PUT]
+  Parameters: {"id"=>"37", "excel_file"=>{"these"=>"params"}}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/37?excel_file%5Bthese%5D=params]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:25:15) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:25:15) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:25:15) [PUT]
+  Parameters: {"id"=>"37", "excel_file"=>{"these"=>"params"}}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/37?excel_file%5Bthese%5D=params]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:25:15) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/excel_files/1010
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:25:15) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/excel_files/1011
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#create (for 0.0.0.0 at 2009-12-03 11:25:15) [POST]
+  Parameters: {"excel_file"=>{"these"=>"params"}}
+Rendering template within layouts/excel_files
+Rendering excel_files/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files?excel_file%5Bthese%5D=params]
+
+
+Processing ExcelFilesController#create (for 0.0.0.0 at 2009-12-03 11:25:15) [POST]
+  Parameters: {"excel_file"=>{}}
+Rendering template within layouts/excel_files
+Rendering excel_files/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files?]
+
+
+Processing ExcelFilesController#create (for 0.0.0.0 at 2009-12-03 11:25:15) [POST]
+  Parameters: {"excel_file"=>{"these"=>"params"}}
+Redirected to http://test.host/excel_files/1014
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/excel_files?excel_file%5Bthese%5D=params]
+
+
+Processing ExcelFilesController#create (for 0.0.0.0 at 2009-12-03 11:25:15) [POST]
+  Parameters: {"excel_file"=>{}}
+Redirected to http://test.host/excel_files/1015
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/excel_files?]
+
+
+Processing ExcelFilesController#edit (for 0.0.0.0 at 2009-12-03 11:25:15) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/37/edit]
+
+
+Processing ExcelFilesController#new (for 0.0.0.0 at 2009-12-03 11:25:15) [GET]
+Rendering template within layouts/excel_files
+Rendering excel_files/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/new]
+
+
+Processing ExcelFilesController#show (for 0.0.0.0 at 2009-12-03 11:25:15) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/excel_files
+Rendering excel_files/show
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/37]
+
+
+Processing ExcelFilesController#index (for 0.0.0.0 at 2009-12-03 11:25:15) [GET]
+Rendering template within layouts/excel_files
+Rendering excel_files/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files]
+Rendering excel_files/new.html.erb
+Rendering excel_files/show.html.erb
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:25:15', '2009-12-03 00:25:15', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+
+
+Processing CellsController#destroy (for 0.0.0.0 at 2009-12-03 11:25:15) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/cells
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/cells/37]
+
+
+Processing CellsController#destroy (for 0.0.0.0 at 2009-12-03 11:25:15) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/cells
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/cells/1]
+
+
+Processing CellsController#update (for 0.0.0.0 at 2009-12-03 11:25:15) [PUT]
+  Parameters: {"cell"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/cells
+Rendering cells/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/37?cell%5Bthese%5D=params]
+
+
+Processing CellsController#update (for 0.0.0.0 at 2009-12-03 11:25:15) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/cells
+Rendering cells/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/1]
+
+
+Processing CellsController#update (for 0.0.0.0 at 2009-12-03 11:25:15) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/cells
+Rendering cells/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/1]
+
+
+Processing CellsController#update (for 0.0.0.0 at 2009-12-03 11:25:15) [PUT]
+  Parameters: {"cell"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/cells
+Rendering cells/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/37?cell%5Bthese%5D=params]
+
+
+Processing CellsController#update (for 0.0.0.0 at 2009-12-03 11:25:15) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/cells/1028
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/cells/1]
+
+
+Processing CellsController#update (for 0.0.0.0 at 2009-12-03 11:25:15) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/cells/1029
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/cells/1]
+
+
+Processing CellsController#create (for 0.0.0.0 at 2009-12-03 11:25:15) [POST]
+  Parameters: {"cell"=>{"these"=>"params"}}
+Rendering template within layouts/cells
+Rendering cells/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells?cell%5Bthese%5D=params]
+
+
+Processing CellsController#create (for 0.0.0.0 at 2009-12-03 11:25:15) [POST]
+  Parameters: {"cell"=>{}}
+Rendering template within layouts/cells
+Rendering cells/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells?]
+
+
+Processing CellsController#create (for 0.0.0.0 at 2009-12-03 11:25:15) [POST]
+  Parameters: {"cell"=>{"these"=>"params"}}
+Redirected to http://test.host/cells/1032
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/cells?cell%5Bthese%5D=params]
+
+
+Processing CellsController#create (for 0.0.0.0 at 2009-12-03 11:25:15) [POST]
+  Parameters: {"cell"=>{}}
+Redirected to http://test.host/cells/1033
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/cells?]
+
+
+Processing CellsController#edit (for 0.0.0.0 at 2009-12-03 11:25:15) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/cells
+Rendering cells/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/37/edit]
+
+
+Processing CellsController#new (for 0.0.0.0 at 2009-12-03 11:25:15) [GET]
+Rendering template within layouts/cells
+Rendering cells/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/new]
+
+
+Processing CellsController#show (for 0.0.0.0 at 2009-12-03 11:25:15) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/cells
+Rendering cells/show
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/37]
+
+
+Processing CellsController#index (for 0.0.0.0 at 2009-12-03 11:25:15) [GET]
+Rendering template within layouts/cells
+Rendering cells/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells]
+Rendering cells/index.html.erb
+Rendering cells/edit.html.erb
+Rendering cells/new.html.erb
+Rendering cells/show.html.erb
+  [4;35;1mCell Create (57.2ms)[0m   [0mINSERT INTO "cells" ("created_at", "updated_at", "row", "column", "contents") VALUES('2009-12-03 00:25:15', '2009-12-03 00:25:15', 1, 'value for column', 'value for contents')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "cells" [0m
+Rendering excel_files/edit.html.erb
+Rendering excel_files/index.html.erb
+
+
+Processing ExcelFilesController#destroy (for 0.0.0.0 at 2009-12-03 11:35:54) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/excel_files
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/excel_files/37]
+
+
+Processing ExcelFilesController#destroy (for 0.0.0.0 at 2009-12-03 11:35:54) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/excel_files
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:35:54) [PUT]
+  Parameters: {"id"=>"37", "excel_file"=>{"these"=>"params"}}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/37?excel_file%5Bthese%5D=params]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:35:54) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:35:54) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:35:54) [PUT]
+  Parameters: {"id"=>"37", "excel_file"=>{"these"=>"params"}}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/37?excel_file%5Bthese%5D=params]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:35:54) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/excel_files/1010
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:35:54) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/excel_files/1011
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#create (for 0.0.0.0 at 2009-12-03 11:35:54) [POST]
+  Parameters: {"excel_file"=>{"these"=>"params"}}
+Rendering template within layouts/excel_files
+Rendering excel_files/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files?excel_file%5Bthese%5D=params]
+
+
+Processing ExcelFilesController#create (for 0.0.0.0 at 2009-12-03 11:35:54) [POST]
+  Parameters: {"excel_file"=>{}}
+Rendering template within layouts/excel_files
+Rendering excel_files/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files?]
+
+
+Processing ExcelFilesController#create (for 0.0.0.0 at 2009-12-03 11:35:54) [POST]
+  Parameters: {"excel_file"=>{"these"=>"params"}}
+Redirected to http://test.host/excel_files/1014
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/excel_files?excel_file%5Bthese%5D=params]
+
+
+Processing ExcelFilesController#create (for 0.0.0.0 at 2009-12-03 11:35:54) [POST]
+  Parameters: {"excel_file"=>{}}
+Redirected to http://test.host/excel_files/1015
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/excel_files?]
+
+
+Processing ExcelFilesController#edit (for 0.0.0.0 at 2009-12-03 11:35:54) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/37/edit]
+
+
+Processing ExcelFilesController#new (for 0.0.0.0 at 2009-12-03 11:35:54) [GET]
+Rendering template within layouts/excel_files
+Rendering excel_files/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/new]
+
+
+Processing ExcelFilesController#show (for 0.0.0.0 at 2009-12-03 11:35:54) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/excel_files
+Rendering excel_files/show
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/37]
+
+
+Processing ExcelFilesController#index (for 0.0.0.0 at 2009-12-03 11:35:54) [GET]
+Rendering template within layouts/excel_files
+Rendering excel_files/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files]
+Rendering excel_files/new.html.erb
+Rendering excel_files/show.html.erb
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:35:54', '2009-12-03 00:35:54', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+
+
+Processing CellsController#destroy (for 0.0.0.0 at 2009-12-03 11:35:54) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/cells
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/cells/37]
+
+
+Processing CellsController#destroy (for 0.0.0.0 at 2009-12-03 11:35:54) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/cells
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/cells/1]
+
+
+Processing CellsController#update (for 0.0.0.0 at 2009-12-03 11:35:54) [PUT]
+  Parameters: {"cell"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/cells
+Rendering cells/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/37?cell%5Bthese%5D=params]
+
+
+Processing CellsController#update (for 0.0.0.0 at 2009-12-03 11:35:54) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/cells
+Rendering cells/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/1]
+
+
+Processing CellsController#update (for 0.0.0.0 at 2009-12-03 11:35:54) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/cells
+Rendering cells/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/1]
+
+
+Processing CellsController#update (for 0.0.0.0 at 2009-12-03 11:35:54) [PUT]
+  Parameters: {"cell"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/cells
+Rendering cells/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/37?cell%5Bthese%5D=params]
+
+
+Processing CellsController#update (for 0.0.0.0 at 2009-12-03 11:35:54) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/cells/1028
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/cells/1]
+
+
+Processing CellsController#update (for 0.0.0.0 at 2009-12-03 11:35:54) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/cells/1029
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/cells/1]
+
+
+Processing CellsController#create (for 0.0.0.0 at 2009-12-03 11:35:54) [POST]
+  Parameters: {"cell"=>{"these"=>"params"}}
+Rendering template within layouts/cells
+Rendering cells/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells?cell%5Bthese%5D=params]
+
+
+Processing CellsController#create (for 0.0.0.0 at 2009-12-03 11:35:54) [POST]
+  Parameters: {"cell"=>{}}
+Rendering template within layouts/cells
+Rendering cells/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells?]
+
+
+Processing CellsController#create (for 0.0.0.0 at 2009-12-03 11:35:54) [POST]
+  Parameters: {"cell"=>{"these"=>"params"}}
+Redirected to http://test.host/cells/1032
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/cells?cell%5Bthese%5D=params]
+
+
+Processing CellsController#create (for 0.0.0.0 at 2009-12-03 11:35:54) [POST]
+  Parameters: {"cell"=>{}}
+Redirected to http://test.host/cells/1033
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/cells?]
+
+
+Processing CellsController#edit (for 0.0.0.0 at 2009-12-03 11:35:54) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/cells
+Rendering cells/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/37/edit]
+
+
+Processing CellsController#new (for 0.0.0.0 at 2009-12-03 11:35:54) [GET]
+Rendering template within layouts/cells
+Rendering cells/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/new]
+
+
+Processing CellsController#show (for 0.0.0.0 at 2009-12-03 11:35:54) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/cells
+Rendering cells/show
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/37]
+
+
+Processing CellsController#index (for 0.0.0.0 at 2009-12-03 11:35:54) [GET]
+Rendering template within layouts/cells
+Rendering cells/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells]
+Rendering cells/index.html.erb
+Rendering cells/edit.html.erb
+Rendering cells/new.html.erb
+Rendering cells/show.html.erb
+  [4;35;1mCell Create (0.4ms)[0m   [0mINSERT INTO "cells" ("created_at", "updated_at", "row", "column", "contents") VALUES('2009-12-03 00:35:54', '2009-12-03 00:35:54', 1, 'value for column', 'value for contents')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "cells" [0m
+Rendering excel_files/index.html.erb
+Rendering excel_files/edit.html.erb
+
+
+Processing ExcelFilesController#destroy (for 0.0.0.0 at 2009-12-03 11:42:25) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/excel_files
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/excel_files/37]
+
+
+Processing ExcelFilesController#destroy (for 0.0.0.0 at 2009-12-03 11:42:25) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/excel_files
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:42:25) [PUT]
+  Parameters: {"id"=>"37", "excel_file"=>{"these"=>"params"}}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/37?excel_file%5Bthese%5D=params]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:42:25) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:42:25) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:42:25) [PUT]
+  Parameters: {"id"=>"37", "excel_file"=>{"these"=>"params"}}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/37?excel_file%5Bthese%5D=params]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:42:25) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/excel_files/1010
+Completed in 56ms (DB: 0) | 302 Found [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:42:25) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/excel_files/1011
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#create (for 0.0.0.0 at 2009-12-03 11:42:25) [POST]
+  Parameters: {"excel_file"=>{"these"=>"params"}}
+Rendering template within layouts/excel_files
+Rendering excel_files/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files?excel_file%5Bthese%5D=params]
+
+
+Processing ExcelFilesController#create (for 0.0.0.0 at 2009-12-03 11:42:25) [POST]
+  Parameters: {"excel_file"=>{}}
+Rendering template within layouts/excel_files
+Rendering excel_files/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files?]
+
+
+Processing ExcelFilesController#create (for 0.0.0.0 at 2009-12-03 11:42:25) [POST]
+  Parameters: {"excel_file"=>{"these"=>"params"}}
+Redirected to http://test.host/excel_files/1014
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/excel_files?excel_file%5Bthese%5D=params]
+
+
+Processing ExcelFilesController#create (for 0.0.0.0 at 2009-12-03 11:42:25) [POST]
+  Parameters: {"excel_file"=>{}}
+Redirected to http://test.host/excel_files/1015
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/excel_files?]
+
+
+Processing ExcelFilesController#edit (for 0.0.0.0 at 2009-12-03 11:42:25) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/37/edit]
+
+
+Processing ExcelFilesController#new (for 0.0.0.0 at 2009-12-03 11:42:25) [GET]
+Rendering template within layouts/excel_files
+Rendering excel_files/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/new]
+
+
+Processing ExcelFilesController#show (for 0.0.0.0 at 2009-12-03 11:42:25) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/excel_files
+Rendering excel_files/show
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/37]
+
+
+Processing ExcelFilesController#index (for 0.0.0.0 at 2009-12-03 11:42:25) [GET]
+Rendering template within layouts/excel_files
+Rendering excel_files/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files]
+Rendering excel_files/new.html.erb
+Rendering excel_files/show.html.erb
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:42:25', '2009-12-03 00:42:25', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+
+
+Processing CellsController#destroy (for 0.0.0.0 at 2009-12-03 11:42:25) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/cells
+Completed in 2ms (DB: 2) | 302 Found [http://test.host/cells/37]
+
+
+Processing CellsController#destroy (for 0.0.0.0 at 2009-12-03 11:42:25) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/cells
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/cells/1]
+
+
+Processing CellsController#update (for 0.0.0.0 at 2009-12-03 11:42:25) [PUT]
+  Parameters: {"cell"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/cells
+Rendering cells/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/37?cell%5Bthese%5D=params]
+
+
+Processing CellsController#update (for 0.0.0.0 at 2009-12-03 11:42:25) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/cells
+Rendering cells/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/1]
+
+
+Processing CellsController#update (for 0.0.0.0 at 2009-12-03 11:42:25) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/cells
+Rendering cells/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/1]
+
+
+Processing CellsController#update (for 0.0.0.0 at 2009-12-03 11:42:25) [PUT]
+  Parameters: {"cell"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/cells
+Rendering cells/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/37?cell%5Bthese%5D=params]
+
+
+Processing CellsController#update (for 0.0.0.0 at 2009-12-03 11:42:25) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/cells/1028
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/cells/1]
+
+
+Processing CellsController#update (for 0.0.0.0 at 2009-12-03 11:42:25) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/cells/1029
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/cells/1]
+
+
+Processing CellsController#create (for 0.0.0.0 at 2009-12-03 11:42:25) [POST]
+  Parameters: {"cell"=>{"these"=>"params"}}
+Rendering template within layouts/cells
+Rendering cells/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells?cell%5Bthese%5D=params]
+
+
+Processing CellsController#create (for 0.0.0.0 at 2009-12-03 11:42:25) [POST]
+  Parameters: {"cell"=>{}}
+Rendering template within layouts/cells
+Rendering cells/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells?]
+
+
+Processing CellsController#create (for 0.0.0.0 at 2009-12-03 11:42:25) [POST]
+  Parameters: {"cell"=>{"these"=>"params"}}
+Redirected to http://test.host/cells/1032
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/cells?cell%5Bthese%5D=params]
+
+
+Processing CellsController#create (for 0.0.0.0 at 2009-12-03 11:42:25) [POST]
+  Parameters: {"cell"=>{}}
+Redirected to http://test.host/cells/1033
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/cells?]
+
+
+Processing CellsController#edit (for 0.0.0.0 at 2009-12-03 11:42:25) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/cells
+Rendering cells/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/37/edit]
+
+
+Processing CellsController#new (for 0.0.0.0 at 2009-12-03 11:42:25) [GET]
+Rendering template within layouts/cells
+Rendering cells/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/new]
+
+
+Processing CellsController#show (for 0.0.0.0 at 2009-12-03 11:42:25) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/cells
+Rendering cells/show
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/37]
+
+
+Processing CellsController#index (for 0.0.0.0 at 2009-12-03 11:42:26) [GET]
+Rendering template within layouts/cells
+Rendering cells/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells]
+Rendering cells/index.html.erb
+Rendering cells/edit.html.erb
+Rendering cells/show.html.erb
+Rendering cells/new.html.erb
+  [4;35;1mCell Create (0.4ms)[0m   [0mINSERT INTO "cells" ("created_at", "updated_at", "row", "column", "contents") VALUES('2009-12-03 00:42:26', '2009-12-03 00:42:26', 1, 'value for column', 'value for contents')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "cells" [0m
+Rendering excel_files/index.html.erb
+Rendering excel_files/edit.html.erb
+
+
+Processing ExcelFilesController#destroy (for 0.0.0.0 at 2009-12-03 11:43:14) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/excel_files
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/excel_files/37]
+
+
+Processing ExcelFilesController#destroy (for 0.0.0.0 at 2009-12-03 11:43:14) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/excel_files
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:43:14) [PUT]
+  Parameters: {"id"=>"37", "excel_file"=>{"these"=>"params"}}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/37?excel_file%5Bthese%5D=params]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:43:14) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:43:14) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:43:14) [PUT]
+  Parameters: {"id"=>"37", "excel_file"=>{"these"=>"params"}}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/37?excel_file%5Bthese%5D=params]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:43:14) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/excel_files/1010
+Completed in 57ms (DB: 0) | 302 Found [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:43:14) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/excel_files/1011
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#create (for 0.0.0.0 at 2009-12-03 11:43:14) [POST]
+  Parameters: {"excel_file"=>{"these"=>"params"}}
+Rendering template within layouts/excel_files
+Rendering excel_files/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files?excel_file%5Bthese%5D=params]
+
+
+Processing ExcelFilesController#create (for 0.0.0.0 at 2009-12-03 11:43:14) [POST]
+  Parameters: {"excel_file"=>{}}
+Rendering template within layouts/excel_files
+Rendering excel_files/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files?]
+
+
+Processing ExcelFilesController#create (for 0.0.0.0 at 2009-12-03 11:43:14) [POST]
+  Parameters: {"excel_file"=>{"these"=>"params"}}
+Redirected to http://test.host/excel_files/1014
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/excel_files?excel_file%5Bthese%5D=params]
+
+
+Processing ExcelFilesController#create (for 0.0.0.0 at 2009-12-03 11:43:14) [POST]
+  Parameters: {"excel_file"=>{}}
+Redirected to http://test.host/excel_files/1015
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/excel_files?]
+
+
+Processing ExcelFilesController#edit (for 0.0.0.0 at 2009-12-03 11:43:14) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/37/edit]
+
+
+Processing ExcelFilesController#new (for 0.0.0.0 at 2009-12-03 11:43:14) [GET]
+Rendering template within layouts/excel_files
+Rendering excel_files/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/new]
+
+
+Processing ExcelFilesController#show (for 0.0.0.0 at 2009-12-03 11:43:14) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/excel_files
+Rendering excel_files/show
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/37]
+
+
+Processing ExcelFilesController#index (for 0.0.0.0 at 2009-12-03 11:43:14) [GET]
+Rendering template within layouts/excel_files
+Rendering excel_files/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files]
+Rendering excel_files/new.html.erb
+Rendering excel_files/show.html.erb
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:43:14', '2009-12-03 00:43:14', 'value for path')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+
+
+Processing CellsController#destroy (for 0.0.0.0 at 2009-12-03 11:43:14) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/cells
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/cells/37]
+
+
+Processing CellsController#destroy (for 0.0.0.0 at 2009-12-03 11:43:14) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/cells
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/cells/1]
+
+
+Processing CellsController#update (for 0.0.0.0 at 2009-12-03 11:43:14) [PUT]
+  Parameters: {"cell"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/cells
+Rendering cells/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/37?cell%5Bthese%5D=params]
+
+
+Processing CellsController#update (for 0.0.0.0 at 2009-12-03 11:43:14) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/cells
+Rendering cells/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/1]
+
+
+Processing CellsController#update (for 0.0.0.0 at 2009-12-03 11:43:14) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/cells
+Rendering cells/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/1]
+
+
+Processing CellsController#update (for 0.0.0.0 at 2009-12-03 11:43:14) [PUT]
+  Parameters: {"cell"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/cells
+Rendering cells/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/37?cell%5Bthese%5D=params]
+
+
+Processing CellsController#update (for 0.0.0.0 at 2009-12-03 11:43:14) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/cells/1028
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/cells/1]
+
+
+Processing CellsController#update (for 0.0.0.0 at 2009-12-03 11:43:14) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/cells/1029
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/cells/1]
+
+
+Processing CellsController#create (for 0.0.0.0 at 2009-12-03 11:43:14) [POST]
+  Parameters: {"cell"=>{"these"=>"params"}}
+Rendering template within layouts/cells
+Rendering cells/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells?cell%5Bthese%5D=params]
+
+
+Processing CellsController#create (for 0.0.0.0 at 2009-12-03 11:43:14) [POST]
+  Parameters: {"cell"=>{}}
+Rendering template within layouts/cells
+Rendering cells/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells?]
+
+
+Processing CellsController#create (for 0.0.0.0 at 2009-12-03 11:43:14) [POST]
+  Parameters: {"cell"=>{"these"=>"params"}}
+Redirected to http://test.host/cells/1032
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/cells?cell%5Bthese%5D=params]
+
+
+Processing CellsController#create (for 0.0.0.0 at 2009-12-03 11:43:14) [POST]
+  Parameters: {"cell"=>{}}
+Redirected to http://test.host/cells/1033
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/cells?]
+
+
+Processing CellsController#edit (for 0.0.0.0 at 2009-12-03 11:43:14) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/cells
+Rendering cells/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/37/edit]
+
+
+Processing CellsController#new (for 0.0.0.0 at 2009-12-03 11:43:14) [GET]
+Rendering template within layouts/cells
+Rendering cells/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/new]
+
+
+Processing CellsController#show (for 0.0.0.0 at 2009-12-03 11:43:14) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/cells
+Rendering cells/show
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/37]
+
+
+Processing CellsController#index (for 0.0.0.0 at 2009-12-03 11:43:14) [GET]
+Rendering template within layouts/cells
+Rendering cells/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells]
+Rendering cells/index.html.erb
+Rendering cells/edit.html.erb
+Rendering cells/show.html.erb
+Rendering cells/new.html.erb
+  [4;35;1mCell Create (0.4ms)[0m   [0mINSERT INTO "cells" ("created_at", "updated_at", "row", "column", "contents") VALUES('2009-12-03 00:43:14', '2009-12-03 00:43:14', 1, 'value for column', 'value for contents')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "cells" [0m
+Rendering excel_files/index.html.erb
+Rendering excel_files/edit.html.erb
+
+
+Processing ExcelFilesController#destroy (for 0.0.0.0 at 2009-12-03 11:44:56) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/excel_files
+Completed in 2ms (DB: 0) | 302 Found [http://test.host/excel_files/37]
+
+
+Processing ExcelFilesController#destroy (for 0.0.0.0 at 2009-12-03 11:44:56) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/excel_files
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:44:56) [PUT]
+  Parameters: {"id"=>"37", "excel_file"=>{"these"=>"params"}}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/37?excel_file%5Bthese%5D=params]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:44:56) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:44:56) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:44:56) [PUT]
+  Parameters: {"id"=>"37", "excel_file"=>{"these"=>"params"}}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/37?excel_file%5Bthese%5D=params]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:44:56) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/excel_files/1010
+Completed in 56ms (DB: 0) | 302 Found [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#update (for 0.0.0.0 at 2009-12-03 11:44:56) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/excel_files/1011
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/excel_files/1]
+
+
+Processing ExcelFilesController#create (for 0.0.0.0 at 2009-12-03 11:44:56) [POST]
+  Parameters: {"excel_file"=>{"these"=>"params"}}
+Rendering template within layouts/excel_files
+Rendering excel_files/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files?excel_file%5Bthese%5D=params]
+
+
+Processing ExcelFilesController#create (for 0.0.0.0 at 2009-12-03 11:44:56) [POST]
+  Parameters: {"excel_file"=>{}}
+Rendering template within layouts/excel_files
+Rendering excel_files/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files?]
+
+
+Processing ExcelFilesController#create (for 0.0.0.0 at 2009-12-03 11:44:56) [POST]
+  Parameters: {"excel_file"=>{"these"=>"params"}}
+Redirected to http://test.host/excel_files/1014
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/excel_files?excel_file%5Bthese%5D=params]
+
+
+Processing ExcelFilesController#create (for 0.0.0.0 at 2009-12-03 11:44:56) [POST]
+  Parameters: {"excel_file"=>{}}
+Redirected to http://test.host/excel_files/1015
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/excel_files?]
+
+
+Processing ExcelFilesController#edit (for 0.0.0.0 at 2009-12-03 11:44:56) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/excel_files
+Rendering excel_files/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/37/edit]
+
+
+Processing ExcelFilesController#new (for 0.0.0.0 at 2009-12-03 11:44:56) [GET]
+Rendering template within layouts/excel_files
+Rendering excel_files/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/new]
+
+
+Processing ExcelFilesController#show (for 0.0.0.0 at 2009-12-03 11:44:56) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/excel_files
+Rendering excel_files/show
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files/37]
+
+
+Processing ExcelFilesController#index (for 0.0.0.0 at 2009-12-03 11:44:56) [GET]
+Rendering template within layouts/excel_files
+Rendering excel_files/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/excel_files]
+Rendering excel_files/new.html.erb
+Rendering excel_files/show.html.erb
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mExcelFile Create (0.4ms)[0m   [0mINSERT INTO "excel_files" ("created_at", "updated_at", "path") VALUES('2009-12-03 00:44:56', '2009-12-03 00:44:56', 'value for path')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "excel_files" [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM "excel_files" [0m
+
+
+Processing CellsController#destroy (for 0.0.0.0 at 2009-12-03 11:44:56) [DELETE]
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/cells
+Completed in 2ms (DB: 2) | 302 Found [http://test.host/cells/37]
+
+
+Processing CellsController#destroy (for 0.0.0.0 at 2009-12-03 11:44:56) [DELETE]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/cells
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/cells/1]
+
+
+Processing CellsController#update (for 0.0.0.0 at 2009-12-03 11:44:56) [PUT]
+  Parameters: {"cell"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/cells
+Rendering cells/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/37?cell%5Bthese%5D=params]
+
+
+Processing CellsController#update (for 0.0.0.0 at 2009-12-03 11:44:56) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/cells
+Rendering cells/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/1]
+
+
+Processing CellsController#update (for 0.0.0.0 at 2009-12-03 11:44:56) [PUT]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/cells
+Rendering cells/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/1]
+
+
+Processing CellsController#update (for 0.0.0.0 at 2009-12-03 11:44:56) [PUT]
+  Parameters: {"cell"=>{"these"=>"params"}, "id"=>"37"}
+Rendering template within layouts/cells
+Rendering cells/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/37?cell%5Bthese%5D=params]
+
+
+Processing CellsController#update (for 0.0.0.0 at 2009-12-03 11:44:57) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/cells/1028
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/cells/1]
+
+
+Processing CellsController#update (for 0.0.0.0 at 2009-12-03 11:44:57) [PUT]
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/cells/1029
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/cells/1]
+
+
+Processing CellsController#create (for 0.0.0.0 at 2009-12-03 11:44:57) [POST]
+  Parameters: {"cell"=>{"these"=>"params"}}
+Rendering template within layouts/cells
+Rendering cells/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells?cell%5Bthese%5D=params]
+
+
+Processing CellsController#create (for 0.0.0.0 at 2009-12-03 11:44:57) [POST]
+  Parameters: {"cell"=>{}}
+Rendering template within layouts/cells
+Rendering cells/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells?]
+
+
+Processing CellsController#create (for 0.0.0.0 at 2009-12-03 11:44:57) [POST]
+  Parameters: {"cell"=>{"these"=>"params"}}
+Redirected to http://test.host/cells/1032
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/cells?cell%5Bthese%5D=params]
+
+
+Processing CellsController#create (for 0.0.0.0 at 2009-12-03 11:44:57) [POST]
+  Parameters: {"cell"=>{}}
+Redirected to http://test.host/cells/1033
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/cells?]
+
+
+Processing CellsController#edit (for 0.0.0.0 at 2009-12-03 11:44:57) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/cells
+Rendering cells/edit
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/37/edit]
+
+
+Processing CellsController#new (for 0.0.0.0 at 2009-12-03 11:44:57) [GET]
+Rendering template within layouts/cells
+Rendering cells/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/new]
+
+
+Processing CellsController#show (for 0.0.0.0 at 2009-12-03 11:44:57) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/cells
+Rendering cells/show
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells/37]
+
+
+Processing CellsController#index (for 0.0.0.0 at 2009-12-03 11:44:57) [GET]
+Rendering template within layouts/cells
+Rendering cells/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/cells]
+Rendering cells/index.html.erb
+Rendering cells/edit.html.erb
+Rendering cells/show.html.erb
+Rendering cells/new.html.erb
+  [4;35;1mCell Create (0.4ms)[0m   [0mINSERT INTO "cells" ("created_at", "updated_at", "row", "column", "contents") VALUES('2009-12-03 00:44:57', '2009-12-03 00:44:57', 1, 'value for column', 'value for contents')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "cells" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "cells" [0m

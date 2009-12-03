@@ -1,0 +1,18 @@
+<p>
+  <b>Contents:</b>
+  <%=h @cell.contents %>
+</p>
+
+<p>
+  <b>Row:</b>
+  <%=h @cell.row %>
+</p>
+
+<p>
+  <b>Column:</b>
+  <%=h @cell.column %>
+</p>
+
+
+<%= link_to 'Edit', edit_cell_path(@cell) %> |
+<%= link_to 'Back', cells_path %>
