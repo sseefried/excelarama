@@ -6,7 +6,7 @@ describe "/cells/show.html.erb" do
     assigns[:cell] = @cell = stub_model(Cell,
       :contents => "value for contents",
       :row => 1,
-      :column => "value for column"
+      :column => 1
     )
   end
 
@@ -14,6 +14,6 @@ describe "/cells/show.html.erb" do
     render
     response.should have_text(/value\ for\ contents/)
     response.should have_text(/1/)
-    response.should have_text(/value\ for\ column/)
+    response.should have_text(/1/)
   end
 end

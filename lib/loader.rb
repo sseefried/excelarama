@@ -2,6 +2,7 @@ class Loader
 
   def initialize(path)
     @excel = Excelx.new(path)
+    @path = path
   end
 
   def load
@@ -15,8 +16,15 @@ class Loader
                    else
                      @excel.cell(row,col)
                    end
-        Cell.create({:row => row, :column => Excelx.number_to_letter(col), 
-                      :contents => contents})
+        ef = ExcelFile.create({:path => @path, 
+                                :first_column => @excel.first_column,
+                                :first_row => @excel.first_row,
+                                :last_column => @excel.last_column,
+                                :last_row => @excel.last_row })
+
+        Cell.create({:row => row, :column => col, 
+                      :contents => contents, :excel_file_id => ef.id})
+
       end
     end
   end

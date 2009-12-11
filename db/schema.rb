@@ -14,13 +14,18 @@ ActiveRecord::Schema.define(:version => 20091203002014) do
   create_table "cells", :force => true do |t|
     t.string   "contents"
     t.integer  "row"
-    t.string   "column"
+    t.integer  "column"
+    t.integer  "excel_file_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "excel_files", :force => true do |t|
     t.string   "path"
+    t.integer  "first_row"
+    t.integer  "first_column"
+    t.integer  "last_row"
+    t.integer  "last_column"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

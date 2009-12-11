@@ -7,7 +7,7 @@ describe Cell do
     @valid_attributes = {
       :contents => "value for contents",
       :row => 1,
-      :column => "value for column"
+      :column => 1
     }
   end
 
@@ -29,13 +29,13 @@ describe Cell do
   end
 
   it "should find a cell A1 with contents 1" do
-    c = Cell.find_cell("A",1)
+    c = Cell.find_cell(1,1)
     c.should_not be_nil
     c.contents.should == "1" 
   end
 
   it "should find a cell A2 with contents 13" do
-    c = Cell.find_cell("A",2)
+    c = Cell.find_cell(1,2)
     c.should_not be_nil
     c.contents.should  == "13"
   end

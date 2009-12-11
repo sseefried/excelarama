@@ -8,12 +8,12 @@ describe "/cells/index.html.erb" do
       stub_model(Cell,
         :contents => "value for contents",
         :row => 1,
-        :column => "value for column"
+        :column => 1
       ),
       stub_model(Cell,
         :contents => "value for contents",
         :row => 1,
-        :column => "value for column"
+        :column => 1
       )
     ]
   end
@@ -22,6 +22,6 @@ describe "/cells/index.html.erb" do
     render
     response.should have_tag("tr>td", "value for contents".to_s, 2)
     response.should have_tag("tr>td", 1.to_s, 2)
-    response.should have_tag("tr>td", "value for column".to_s, 2)
+    response.should have_tag("tr>td", 1.to_s, 2)
   end
 end

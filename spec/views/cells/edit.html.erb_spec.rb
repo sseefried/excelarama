@@ -8,7 +8,7 @@ describe "/cells/edit.html.erb" do
       :new_record? => false,
       :contents => "value for contents",
       :row => 1,
-      :column => "value for column"
+      :column => 1
     )
   end
 

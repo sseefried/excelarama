@@ -3,9 +3,9 @@
 a1:
   contents: 1
   row: 1
-  column: A
+  column: 1
 
 a2:
   contents: 13
   row: 2
-  column: A
+  column: 1

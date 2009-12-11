@@ -1,9 +1,10 @@
 class CreateCells < ActiveRecord::Migration
   def self.up
     create_table :cells do |t|
-      t.string :contents
+      t.string  :contents
       t.integer :row
-      t.string :column
+      t.integer :column
+      t.references :excel_file
 
       t.timestamps
     end
