@@ -22,7 +22,7 @@ class ExcelFile < ActiveRecord::Base
         node = p.parse
         return eval_node(node)
       rescue
-        return nil
+        return "&lt;Could not evaluate&gt;"
       end
     else
       return nil

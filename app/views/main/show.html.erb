@@ -14,7 +14,9 @@
 	<% c = @excel_file.cell_at(col,row) %>
 	<% if !c.nil? -%>
           <% if c.is_formula -%>
-            <%= @excel_file.evaluate_cell(col, row) %>
+	    <div style="color: green">
+              <%= @excel_file.evaluate_cell(col, row) %>
+            </div>
 	  <% else -%>
 	    <%= @excel_file.cell_at(col,row).contents %>
 	  <% end -%>
@@ -25,3 +27,6 @@
     <% end -%>
   </tbody>
 </table>
+<hr/>
+Evaluated values in <span style="color: green">green</span>
+
