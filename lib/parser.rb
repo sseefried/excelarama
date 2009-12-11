@@ -1,4 +1,4 @@
-include Lexer
+
 
 # <Exp>    ::= <Term> <Exp'> 
 # <Exp'>   ::= + <Exp> | - <Exp> | e
@@ -48,6 +48,7 @@ class Sub < BinOp; end
 
 
 class Parser 
+  include Lexer
 
   def initialize(tokens)
     @errors = []
