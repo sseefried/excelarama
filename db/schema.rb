@@ -11,7 +11,7 @@
 
 ActiveRecord::Schema.define(:version => 20091203002014) do
 
-  create_table "cells", :force => true do |t|
+  create_table "excel_cells", :force => true do |t|
     t.string   "contents"
     t.integer  "row"
     t.integer  "column"

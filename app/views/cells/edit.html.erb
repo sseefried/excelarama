@@ -1,6 +1,6 @@
 <h1>Editing cell</h1>
 
-<% form_for(@cell) do |f| %>
+<% form_for(@excel_cell) do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -20,5 +20,5 @@
   </p>
 <% end %>
 
-<%= link_to 'Show', @cell %> |
+<%= link_to 'Show', @excel_cell %> |
 <%= link_to 'Back', cells_path %>

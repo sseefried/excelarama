@@ -1,0 +1,18 @@
+<table>
+  <tbody>
+    <tr>
+      <th>&nbsp;</th>
+      <% (@excel_file.first_column..@excel_file.last_column).each do |col| -%>
+      <th><%= h Excelx.number_to_letter(col) -%></th>
+      <% end -%>
+    </tr>
+    <% (@excel_file.first_row..@excel_file.last_row).each do |row| -%>
+    <tr>
+      <th><%= h row %></th>
+      <% (@excel_file.first_column..@excel_file.last_column).each do |col| -%>
+      <td><%= @excel_file.evaluate_cell(col, row) %></td>
+      <% end -%>
+    </tr>
+    <% end -%>
+  </tbody>
+</table>

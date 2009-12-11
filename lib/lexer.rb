@@ -27,22 +27,28 @@ module Lexer
       else
         if  str =~ /^(\+)(.*)/ 
           cls = PlusToken
+          rest = $2
         elsif  str =~ /^(\*)(.*)/ 
           cls = StarToken
+          rest = $2
         elsif  str =~ /^(-)(.*)/ 
           cls = MinusToken
+          rest = $2
         elsif str =~ /^(\/)(.*)/ 
           cls = SlashToken
+          rest = $2
         elsif str =~ /^(\$?[A-Za-z]+\$?[1-9][0-9]*)(.*)/
           cls = CellToken
-        elsif str =~ /^([1-9][0-9]*)(.*)/
+          rest = $2
+        elsif str =~ /^([1-9][0-9]*(\.[0-9]*)?)(.*)/
           cls = ConstToken
+          rest = $3
         else
           raise "Lexing failed on `#{str}'"
         end
         
         token = cls.new($1)
-        rest = $2
+
         
         tokens = lex(rest)
         return [token] + tokens

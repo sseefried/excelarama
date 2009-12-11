@@ -15,6 +15,18 @@ describe ExcelFile do
     lambda {ExcelFile.create!(@valid_attributes)}.should change(ExcelFile, :count).by(1)
   end
 
+  it "should evaluate values of cells" do
+    l  = Loader.new(EXCEL_FILE_PATH)
+    id = l.load
+    ef = ExcelFile.find(id)
+    ef.evaluate_cell(1,2).should == 7
+
+    ef.evaluate_cell(2,1).should == 1.0
+    ef.evaluate_cell(2,2).should == 2.0
+    ef.evaluate_cell(2,10).should == 10.0
+
+   end
+
   it "should not create a new instance given invalid attributes" do
     lambda do
       b = ExcelFile.create({:path => nil, :first_column => nil, :first_row => nil, 
@@ -27,5 +39,7 @@ describe ExcelFile do
 
     end.should_not change(ExcelFile, :count)
   end
+
+
 
 end

@@ -1,4 +1,4 @@
-require 'lexer'
+include Lexer
 
 # <Exp>    ::= <Term> <Exp'> 
 # <Exp'>   ::= + <Exp> | - <Exp> | e
@@ -16,9 +16,9 @@ require 'lexer'
 class Cell
   attr_reader :row, :col
   
-  def initialize(row , col)
-    @row = row
+  def initialize(col , row)
     @col = col
+    @row = row
   end
 end
 
@@ -109,10 +109,10 @@ class Parser
   def factor
     if (cell = accept(CellToken))
       cell.string =~ /^\$?([A-Za-z])+\$?([1-9][0-9]*)/
-      return Cell.new($1, $2.to_i)
+      return Cell.new(Excelx.letter_to_number($1), $2.to_i)
     elsif (const = accept(ConstToken))
-      const.string =~ /([1-9][0-9]*)/
-      return Const.new($1.to_i)
+      const.string =~ /([1-9][0-9]*(\.[0-9]*))/
+      return Const.new($1.to_f)
     else
       raise "Parse error: Expecting Cell or Const. #{tokens = @tokens.inspect}"
     end

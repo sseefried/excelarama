@@ -1,0 +1,6 @@
+
+<%= flash[:notice] unless flash[:notice].nil? %>
+<% form_tag :action => 'load' do -%>
+<%= text_field_tag 'path' %>
+<%= submit_tag "Load" %>
+<% end -%>

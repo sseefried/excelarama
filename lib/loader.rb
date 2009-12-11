@@ -6,9 +6,17 @@ class Loader
   end
 
   def load
-    # Blow away anything that is there.
-    Cell.destroy_all
     @excel.default_sheet = @excel.sheets.first
+    ExcelFile.destroy_all(['path = ?', @path])
+    ef = ExcelFile.create({:path => @path, 
+                                :first_column => @excel.first_column,
+                                :first_row => @excel.first_row,
+                                :last_column => @excel.last_column,
+                                :last_row => @excel.last_row })
+
+    # Blow away anything that is there.
+    ExcelCell.destroy_all(['excel_file_id = ?', ef.id])
+
     (@excel.first_row..@excel.last_row).each do |row|
       (@excel.first_column..@excel.last_column).each do |col|
         contents = if @excel.formula?(row, col)
@@ -16,17 +24,13 @@ class Loader
                    else
                      @excel.cell(row,col)
                    end
-        ef = ExcelFile.create({:path => @path, 
-                                :first_column => @excel.first_column,
-                                :first_row => @excel.first_row,
-                                :last_column => @excel.last_column,
-                                :last_row => @excel.last_row })
 
-        Cell.create({:row => row, :column => col, 
+        ExcelCell.create({:row => row, :column => col, 
                       :contents => contents, :excel_file_id => ef.id})
 
       end
     end
+    return ef.id
   end
 
 end

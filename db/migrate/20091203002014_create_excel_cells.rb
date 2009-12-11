@@ -1,6 +1,6 @@
-class CreateCells < ActiveRecord::Migration
+class CreateExcelCells < ActiveRecord::Migration
   def self.up
-    create_table :cells do |t|
+    create_table :excel_cells do |t|
       t.string  :contents
       t.integer :row
       t.integer :column
@@ -11,6 +11,6 @@ class CreateCells < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :cells
+    drop_table :excel_cells
   end
 end
