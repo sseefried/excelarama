@@ -4,8 +4,8 @@ class CreateExcelCells < ActiveRecord::Migration
       t.string  :contents
       t.integer :row
       t.integer :column
+      t.boolean :is_formula
       t.references :excel_file
-
       t.timestamps
     end
   end

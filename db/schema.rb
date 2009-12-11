@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(:version => 20091203002014) do
     t.string   "contents"
     t.integer  "row"
     t.integer  "column"
+    t.boolean  "is_formula"
     t.integer  "excel_file_id"
     t.datetime "created_at"
     t.datetime "updated_at"

@@ -1,6 +1,10 @@
 
-<%= flash[:notice] unless flash[:notice].nil? %>
+<% if flash[:notice] %>
+<div style="color: red">
+  <%= flash[:notice]  %>
+</div>
+<% end -%>
 <% form_tag :action => 'load' do -%>
-<%= text_field_tag 'path', {}, {:size => 100}  %>
+<%= text_field_tag('path', @path, {:size => 100})  %>
 <%= submit_tag "Load" %>
 <% end -%>

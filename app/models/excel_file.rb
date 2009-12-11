@@ -17,17 +17,18 @@ class ExcelFile < ActiveRecord::Base
   def evaluate_cell(col,row)
     if cell = cell_at(col,row)
       begin
-        p = Parser.new(lex(cell.contents))
+        tokens = lex(cell.contents)
+        p = Parser.new(tokens)
         node = p.parse
         return eval_node(node)
       rescue
-        return cell.contents
+        return nil
       end
     else
       return nil
     end
-   end
-
+  end
+  
    private
 
    def eval_node(node)

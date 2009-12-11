@@ -1,7 +1,7 @@
 class MainController < ApplicationController
 
   def index
-
+    @path = params[:path]
   end
 
   def load
@@ -10,8 +10,9 @@ class MainController < ApplicationController
       @excel_file_id = l.load
       redirect_to({:action => 'show', :id => @excel_file_id})
     rescue
-      flash[:notice] = "File #{params[:path]} does not exist"
-      redirect_to :action => 'index'
+      flash[:notice] = "File `#{params[:path]}' does not exist"
+      
+      redirect_to :action => 'index', :path => params[:path]
     end
   end
 

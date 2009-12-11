@@ -10,7 +10,16 @@
     <tr>
       <th><%= h row %></th>
       <% (@excel_file.first_column..@excel_file.last_column).each do |col| -%>
-      <td><%= @excel_file.evaluate_cell(col, row) %></td>
+      <td>
+	<% c = @excel_file.cell_at(col,row) %>
+	<% if !c.nil? -%>
+          <% if c.is_formula -%>
+            <%= @excel_file.evaluate_cell(col, row) %>
+	  <% else -%>
+	    <%= @excel_file.cell_at(col,row).contents %>
+	  <% end -%>
+        <% end -%>
+      </td>
       <% end -%>
     </tr>
     <% end -%>
