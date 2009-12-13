@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(:version => 20091203002014) do
   create_table "excel_cells", :force => true do |t|
     t.string   "contents"
     t.integer  "row"
-    t.integer  "column"
+    t.integer  "col"
     t.boolean  "is_formula"
     t.integer  "excel_file_id"
     t.datetime "created_at"

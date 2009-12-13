@@ -3,7 +3,7 @@ class CreateExcelCells < ActiveRecord::Migration
     create_table :excel_cells do |t|
       t.string  :contents
       t.integer :row
-      t.integer :column
+      t.integer :col
       t.boolean :is_formula
       t.references :excel_file
       t.timestamps

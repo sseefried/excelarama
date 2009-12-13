@@ -9,7 +9,7 @@ describe ExcelCell do
     @valid_attributes = {
       :contents => "value for contents",
       :row => 1,
-      :column => 1,
+      :col => 1,
       :excel_file_id => @ef
     }
   end
@@ -19,7 +19,7 @@ describe ExcelCell do
   end
 
   it "should not create a new instance given invalid attributes" do
-    %w(excel_file_id contents row column).each {|attr|
+    %w(excel_file_id contents row col).each {|attr|
       lambda do
         b = ExcelCell.create({attr => nil})
         b.errors.on(attr).should_not be_nil

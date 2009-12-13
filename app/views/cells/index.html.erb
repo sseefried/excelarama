@@ -4,14 +4,14 @@
   <tr>
     <th>Contents</th>
     <th>Row</th>
-    <th>Column</th>
+    <th>Col</th>
   </tr>
 
 <% @excel_cells.each do |excel_cell| %>
   <tr>
     <td><%=h excel_cell.contents %></td>
     <td><%=h excel_cell.row %></td>
-    <td><%=h excel_cell.column %></td>
+    <td><%=h excel_cell.col %></td>
     <td><%= link_to 'Show', excel_cell %></td>
     <td><%= link_to 'Edit', edit_excel_cell_path(excel_cell) %></td>
     <td><%= link_to 'Destroy', excel_cell, :confirm => 'Are you sure?', :method => :delete %></td>

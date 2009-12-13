@@ -27,7 +27,7 @@ class Loader
         is_formula = @excel.formula?(row,col)
 
 
-        ExcelCell.create({:row => row, :column => col, 
+        ExcelCell.create({:row => row, :col => col, 
                       :contents => contents, :excel_file_id => ef.id, 
                            :is_formula => is_formula})
 
